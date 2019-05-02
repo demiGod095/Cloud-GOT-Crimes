@@ -19,10 +19,10 @@
   - https://www.youtube.com/watch?v=hDuyvdzLWlo
   
 * Installing CouchDB
-  1 - yum -y install epel-release
-  2 - cd /etc/yum.repos.d/
-    2.1- vi apache-couchdb.repo
-    2.2- ADD:
+  1. yum -y install epel-release
+  2. cd /etc/yum.repos.d/
+    2.1. vi apache-couchdb.repo
+    2.2. ADD:
          [bintray--apache-couchdb-rpm]
          name=bintray--apache-couchdb-rpm
          baseurl=http://apache.bintray.com/couchdb-rpm/el$releasever/$basearch/
