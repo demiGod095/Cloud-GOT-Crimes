@@ -29,14 +29,14 @@
          gpgcheck=0
          repo_gpgcheck=0
          enabled=1
-  3- yum -y install couchdb
-  4- systemctl start couchdb
-  5- cd /opt/couchdb
-    5.1- vi etc/default.ini
-    5.2- CHANGE:
+  - yum -y install couchdb
+  - systemctl start couchdb
+  - cd /opt/couchdb
+    - vi etc/default.ini
+    - CHANGE:
          [chttpd]
          port = 5984
          bind_address = 0.0.0.0
-  6- systemctl restart couchdb
+  - systemctl restart couchdb
   
 * Port forwarding - ssh -i ./sins101.pem -N -L 5984:localhost:5984 ec2-user@172.26.38.5
