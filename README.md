@@ -15,8 +15,7 @@
     - export PATH=/home/ec2-user/node-v6.0.0-linux-x64/bin:$PATH
     
 * Resolving docker and proxy issues
-  - https://www.youtube.com/watch?v=P0W_LhBjDgI
-  - https://www.youtube.com/watch?v=hDuyvdzLWlo
+  - Refer Docker-README.md
   
 * Installing CouchDB
   - yum -y install epel-release
