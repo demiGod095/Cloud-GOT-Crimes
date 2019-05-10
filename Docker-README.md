@@ -35,3 +35,6 @@
 	
 	sudo systemctl daemon-reload
 	sudo systemctl restart docker
+
+6. Pull couchDB image
+	docker pull couchdb:2.3.0
