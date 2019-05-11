@@ -14,7 +14,7 @@
 - name: Create a list of volume Ids
   set_fact:
     sg_names: '{{ os_vol_ids|default([]) + [ item.id ] }}'
-  loop: '{{ os_vol.results }}'
+  loop: '{{ os_vol_results }}'
   
 - debug:
     msg: "Volume {{ os_vol_ids }} has been created."
