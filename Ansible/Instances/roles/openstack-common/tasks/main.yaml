@@ -3,8 +3,8 @@
   become: yes
   apt:
     name: ['python-pip']
-        state: latest
-        update_cahce: yes
+    state: latest
+    update_cahce: yes
   when: ansible_distribution == "Ubuntu"
 # sudo apt-get update: sudo apt-get install python-pip
 
@@ -12,12 +12,12 @@
   become: yes
   pip:
     name: ['pip']
-        state: latest
+    state: latest
 # pip install --upgrade pip
 
 - name: Install openstacksdk
   become: yes
   pip:
     name: ['openstacksdk']
-        state: latest
+    state: latest
 # pip install openstacksdk
