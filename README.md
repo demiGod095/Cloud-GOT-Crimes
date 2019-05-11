@@ -8,6 +8,22 @@
   - ftp_proxy="http://wwwproxy.unimelb.edu.au:8000"
   - no_proxy=localhost,127.0.0.1,127.0.1.1,ubuntu
 
+* To install Python
+  - Getting your Server ready for the install:
+     - sudo yum update
+     - sudo yum install yum-utils
+     - sudo yum groupinstall development
+     - sudo yum -y install https://centos7.iuscommunity.org/ius-release.rpm
+
+
+
+  - Installing Python and PIP
+     - sudo yum -y install python36u
+     - python3.6 -V
+     - sudo yum -y install python36u-pip
+     - sudo yum -y install python36u-devel
+
+
 * Installing Nodejs-
   1. wget https://nodejs.org/en/blog/release/v6.0.0/
   2. tar -xf <file_name>
