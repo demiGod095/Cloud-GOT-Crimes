@@ -8,9 +8,11 @@ from tweepy.streaming import StreamListener
 
 from TwitterSearch import *
 
+melbBounds = [144.5733433051,-38.0005850593,145.3759641168,-37.5707993967]
+
 def writeData(data):
 	with open( '/home/ec2-user/gathered.json', 'a') as f :
-		f.write(data)
+		f.write(data[:-1])
 		f.write(',\n')
 
 class listener(StreamListener):
@@ -46,5 +48,4 @@ auth = OAuthHandler( keys[keyId]['consumer']['key'], keys[keyId]['consumer']['se
 auth.set_access_token( keys[keyId]['access']['key'], keys[keyId]['access']['secret'] )
 
 twitterStream = Stream(auth, listener())
-twitterStream.filter(track=['food'])
-
+twitterStream.filter(locations=melbBounds)
