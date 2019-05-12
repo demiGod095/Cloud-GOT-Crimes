@@ -8,6 +8,11 @@ from tweepy.streaming import StreamListener
 
 from TwitterSearch import *
 
+def writeData(data):
+	with open( '/home/ec2-user/gathered.json', 'a') as f :
+		f.write(data)
+		f.write(',\n')
+
 class listener(StreamListener):
 
 	def on_data(self, data):
@@ -17,14 +22,14 @@ class listener(StreamListener):
 			# print(data)
 			pass
 		else:
-			jData = json.loads(data)
+			# jData = json.loads(data)
 			# print(json.dumps(jData, indent = 4))
-			print(jData['user']['screen_name'])
-			exit(0)
+			# print(jData['user']['screen_name'])
+			writeData(data)
+			# exit(0)
 
 	def on_error(self, status):
 		print (status)
-
 
 keyId = 0
 keys = None
@@ -35,8 +40,6 @@ with open('apiKeys.json') as fKeys:
 if keys == None:
 	print('Failed to load apiKeys.\nExitting.')
 	exit(0)
-
-
 
 auth = OAuthHandler( keys[keyId]['consumer']['key'], keys[keyId]['consumer']['secret'] )
 
