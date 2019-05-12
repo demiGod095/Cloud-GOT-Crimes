@@ -28,8 +28,8 @@ security_groups:
     remote_ip_prefix: 0.0.0.0/0  
 
 # Instance
-instance_name: deadlySins_S3
-instance_image: 156f4c28-d42d-45a7-8625-616ce5b91392
-#public key
-instance_key_name: sins101
-instance_flavor: uom.mse.2c9g
+instances:
+  - instance_name: deadlySins_S3
+    instance_image: 156f4c28-d42d-45a7-8625-616ce5b91392
+    instance_key_name: sins101
+    instance_flavor: uom.mse.2c9g
