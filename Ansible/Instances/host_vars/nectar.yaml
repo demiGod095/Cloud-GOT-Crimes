@@ -8,20 +8,24 @@ volumes:
 
 # Security group
 security_groups:
-  - name: demo_ssh
-    description: "Demo security group for SSh access"
+  - name: deadlySins_SG1
+    description: "Security group 1"
     protocol: tcp
-    port_range_min: 22
-    port_range_max: 22
-    #not a good approach to have ip 0.0.0.0 as everyone can access
+    port_range_min: 5984
+    port_range_max: 5984
     remote_ip_prefix: 0.0.0.0/0
-  - name: demo_http
-    description: "Demo security group for HTTP"
+  - name: deadlySins_SG2
+    description: "Security group 2"
     protocol: tcp
-    port_range_min: 80
-    port_range_max: 80
-    #not a good approach to have ip 0.0.0.0 as everyone can access
+    port_range_min: 8080
+    port_range_max: 8080
     remote_ip_prefix: 0.0.0.0/0
+  - name: deadlySins_SG3
+    description: "Security group 3"
+    protocol: tcp
+    port_range_min: 5986
+    port_range_max: 5986
+    remote_ip_prefix: 0.0.0.0/0  
 
 # Instance
 instance_name: deadlySins_S3
