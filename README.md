@@ -1,6 +1,6 @@
 # CC_assignment_2
 
-* Ideas :-
+* Ideas :- We are doing GOT
 
 * Network Proxy :- /etc/enviornment
   - http_proxy="http://wwwproxy.unimelb.edu.au:8000"
