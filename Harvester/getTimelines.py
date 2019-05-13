@@ -2,11 +2,21 @@ import json
 from datetime import date
 import tweepy
 from TwitterSearch import *
+import couchdb
 
 currentUser = 'shreyasAujc'
-
+dbname = 'twitter_timeline'
 keyId = 0
 keys = None
+
+try:
+	user = "server_admin"
+	password = "password"
+	c_server = couchdb.Server("http://%s:%s@localhost:5984/" % (user,password))
+
+except:
+	print ("Cannot connect to DB")
+	exit(0)
 
 with open('apiKeys.json') as fKeys:
 	keys = json.load(fKeys)
@@ -14,6 +24,12 @@ with open('apiKeys.json') as fKeys:
 if keys == None:
 	print('Failed to load apiKeys.\nExitting.')
 	exit(0)
+
+
+if dbname in c_server:
+	db = c_server[dbname]
+else:
+	db = c_server.create(dbname)
 
 try:
 	
@@ -43,7 +59,19 @@ try:
 	twitDoc['docs'].reverse()
 					
 	# INSERT INTO DB HERE
-	print(json.dumps(twitDoc))
+	# print(json.dumps(twitDoc))
+	print ("Number of tweets in the timeline -,",len(twitDoc['docs']))
+	print ("-"*10,"Connecting to DB","-"*10)
+	count = 0
+	for document in twitDoc['docs']:
+		try:
+			db.save(document)
+			count += 1
+		except Exception as e:
+			print (e)
+			print (document)
+	print ("-"*10,str(count)+" documents inserted","-"*10)
+
 
 
 except TwitterSearchException as e: # catch all those ugly errors
