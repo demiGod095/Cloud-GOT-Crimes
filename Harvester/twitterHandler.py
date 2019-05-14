@@ -3,44 +3,43 @@ import json
 from datetime import date
 
 import couchdb
-
+import tweepy
 from tweepy import Stream
 from tweepy import OAuthHandler
 from tweepy.streaming import StreamListener
 
 
-from testTimeline import getTimeline
+from functionTimeline import getTimeline
 
 class myListener(StreamListener):
 
 	def on_data(self, data):
 		# jData = json.parse(data)
-
+		print ("2")	
 		if data[0].isdigit():
-			# print(data)
-			pass
+			print(data)
+			#pass
 		else:
 			jData = json.loads(data)
 			uId = jData['user']['id_str']
 			uCreationYear = int(jData['user']['created_at'][-4:])
 			
 			# insert into database if doesn't exist
-			db[uId] = { 'user_year' :  uCreationYear }
-
-			# call get timeline for current user
-			## CALL HERE
-
-			# getTimeline(uId, c_server, auth)
-
+			try:
+				db[uId] = { 'user_year' :  uCreationYear }
+				print(uId,uCreationYear)
+				getTimeline(uId, c_server, auth)
+			except Exception as e:
+				print (e)
 
 			# print(uId, uCreationYear)
 			# exit(0)
 
 	def on_error(self, status) :
-		print (status)
+		print ("Stream",status)
 
 
-keyId = 1
+keyId = 0
 keys = None
 
 cityId = 0
@@ -77,9 +76,8 @@ if dbname in c_server:
 else:
 	db = c_server.create(dbname)
 
-
-auth = OAuthHandler( keys[keyId]['consumer']['key'], keys[keyId]['consumer']['secret'] )
+auth = tweepy.OAuthHandler( keys[keyId]['consumer']['key'], keys[keyId]['consumer']['secret'] )
 auth.set_access_token( keys[keyId]['access']['key'], keys[keyId]['access']['secret'] )
-
+print ("1",auth)
 twitterStream = Stream(auth, myListener())
 twitterStream.filter(locations=cityBounds['box'])
