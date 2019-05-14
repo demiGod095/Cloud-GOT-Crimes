@@ -2,8 +2,8 @@
 
 # Usage: create-cluster.sh user password port local-port space-separated-ips
 
-user=$1
-password=$2
+user="server_admin"
+password="password"
 port=$3
 localPort=$4
 ips=$5
