@@ -6,6 +6,7 @@ volumes:
   - vol_name: deadlySins_S3
     vol_size: 50
 
+ansible_ssh_private_key: ./sins101.pem
 # Security group
 security_groups:
   - name: deadlySins_SG1
