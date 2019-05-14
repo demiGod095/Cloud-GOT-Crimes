@@ -49,4 +49,4 @@ def getTimeline(uId, c_server, auth):
 		print ("-"*10,str(count)+" documents inserted","-"*10)
 
 	except TwitterSearchException as e: # catch all those ugly errors
-		print(e)
+		print(e)[root@s1 Harvester]# 
