@@ -1,10 +1,10 @@
 # Create an instance on Nectar
 - name: Create an instance
   os_server:
-    name: '{{ instance_name }}'
-    image: '{{ instance_image }}'
-    key_name: '{{ instance_key_name }}'
-    flavor: '{{ instance_flavor }}'
+    name: '{{ item.instance_name }}'
+    image: '{{ item.instance_image }}'
+    key_name: '{{ item.instance_key_name }}'
+    flavor: '{{ item.instance_flavor }}'
     availability_zone: '{{ availability_zone }}'
     security_groups: '{{ sg_names }}'
     volumes: '{{ os_vol_ids }}'
@@ -15,6 +15,14 @@
   register: os_instance
   loop: '{{ instances }}'
 
+- name: Set facts for created insatnce
+  set_fact:
+    public_v4: '{{ item.server.public_v4 }}'
+    key_name: '{{ item.server.key_name }}'
+    name: '{{ item.server.name }}'
+    status: '{{ item.server.status }}'
+  loop: '{{ os_instance.results }}'
+  
 - debug:
-    msg: "Instance {{ instance_name }} has been created. IP address is {{ os_instance.openstack.public_v4 }}"
-  when: os_instance.openstack is defined
+    msg: "Instance {{ name }} is Active with ip - {{ public_v4 }}"
+  when: '{{ os_instance.changed }}'
