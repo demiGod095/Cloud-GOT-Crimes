@@ -1,7 +1,6 @@
 {
 	"docs":[
 		{
-			"lga_name11": "Melbourne (C)",
 			"a_total": 34139,
 			"b_total": 171088,
 			"c_total": 12946,
@@ -12,7 +11,6 @@
 			"ref_period": 2012
 		},
 		{
-			"lga_name11": "Melbourne (C)",
 			"a_total": 35778,
 			"b_total": 174383,
 			"c_total": 14306,
@@ -23,7 +21,6 @@
 			"ref_period": 2013
 		},
 		{
-			"lga_name11": "Melbourne (C)",
 			"a_total": 36293,
 			"b_total": 174966,
 			"c_total": 15791,
@@ -34,7 +31,6 @@
 			"ref_period": 2014
 		},
 		{
-			"lga_name11": "Melbourne (C)",
 			"a_total": 38183,
 			"b_total": 184008,
 			"c_total": 18045,
@@ -45,7 +41,6 @@
 			"ref_period": 2015
 		},
 		{
-			"lga_name11": "Melbourne (C)",
 			"a_total": 41986,
 			"b_total": 207936,
 			"c_total": 18541,
