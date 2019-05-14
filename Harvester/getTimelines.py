@@ -1,7 +1,7 @@
 import json
 from datetime import date
 import tweepy
-from TwitterSearch import *
+
 import couchdb
 
 currentUser = 'shreyasAujc'
@@ -15,7 +15,7 @@ try:
 	c_server = couchdb.Server("http://%s:%s@localhost:5984/" % (user,password))
 
 except:
-	print ("Cannot connect to DB")
+	print ("Cannot connect to DB.\nExitting.")
 	exit(0)
 
 with open('apiKeys.json') as fKeys:
@@ -45,14 +45,14 @@ try:
 	# start asking Twitter about the timeline
 	twitDoc = {}
 	twitDoc['docs'] = []
-	for status in tweepy.Cursor(api.user_timeline, screen_name='@'+currentUser, tweet_mode="extended").items():
+	for status in tweepy.Cursor(api.user_timeline, screen_name='@'+currentUser, tweet_mode="extended", trim_user=True).items():
 		try:
 			twitYear = status.created_at.year
 			twitUserId = status.user.id
 			twitUserName = status.user.name
 			twitText = status.full_text
 			twitRetweeted = status.retweeted
-			twitScreenName = status.user.screen_name		
+			twitScreenName = status.user.screen_name
 			twitDoc['docs'].append({'user_id':twitUserId,'screen_name':twitScreenName,'year':twitYear,'text':twitText,'user_name':twitUserName,'retweet_status':twitRetweeted})
 		except:
 			pass
