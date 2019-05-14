@@ -29,11 +29,15 @@ def do_magic(content):
 				grid['f_total'] += cities['properties']['f_total']
 				grid['ref_period'] = cities['properties']['ref_period']
 				grid['estimated_population'] += cities['properties']['lga_erp']
-	print (grid)
+	return grid
 				
-
+final = {}
+final['doc'] = []
 for file in data_year:
 	file_name = file + '.json'
 	with open(file_name) as fs:
 		content = json.load(fs)
-		do_magic(content)
+		final['doc'].append( do_magic(content) )
+
+with open('0Melbourne_story.json', 'w') as out:
+	out.write(json.dumps(final, indent = 4))

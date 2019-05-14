@@ -1,1 +1,59 @@
-{"docs":[{'lga_name11': 'Melbourne (C)', 'a_total': 41986, 'b_total': 207936, 'c_total': 18541, 'd_total': 20457, 'e_total': 38567, 'f_total': 949, 'estimated_population': 3626955, 'ref_period': 2016},{'lga_name11': 'Melbourne (C)', 'a_total': 38183, 'b_total': 184008, 'c_total': 18045, 'd_total': 21720, 'e_total': 32421, 'f_total': 821, 'estimated_population': 3554728, 'ref_period': 2015},{'lga_name11': 'Melbourne (C)', 'a_total': 36293, 'b_total': 174966, 'c_total': 15791, 'd_total': 21952, 'e_total': 27728, 'f_total': 1254, 'estimated_population': 3486320, 'ref_period': 2014},{'lga_name11': 'Melbourne (C)', 'a_total': 35778, 'b_total': 174383, 'c_total': 14306, 'd_total': 22985, 'e_total': 18944, 'f_total': 1114, 'estimated_population': 3414103, 'ref_period': 2013},{'lga_name11': 'Melbourne (C)', 'a_total': 34139, 'b_total': 171088, 'c_total': 12946, 'd_total': 20605, 'e_total': 15686, 'f_total': 1206, 'estimated_population': 3345678, 'ref_period': 2012}]}
+{
+	"docs":[
+		{
+			"lga_name11": "Melbourne (C)",
+			"a_total": 34139,
+			"b_total": 171088,
+			"c_total": 12946,
+			"d_total": 20605,
+			"e_total": 15686,
+			"f_total": 1206,
+			"estimated_population": 3345678,
+			"ref_period": 2012
+		},
+		{
+			"lga_name11": "Melbourne (C)",
+			"a_total": 35778,
+			"b_total": 174383,
+			"c_total": 14306,
+			"d_total": 22985,
+			"e_total": 18944,
+			"f_total": 1114,
+			"estimated_population": 3414103,
+			"ref_period": 2013
+		},
+		{
+			"lga_name11": "Melbourne (C)",
+			"a_total": 36293,
+			"b_total": 174966,
+			"c_total": 15791,
+			"d_total": 21952,
+			"e_total": 27728,
+			"f_total": 1254,
+			"estimated_population": 3486320,
+			"ref_period": 2014
+		},
+		{
+			"lga_name11": "Melbourne (C)",
+			"a_total": 38183,
+			"b_total": 184008,
+			"c_total": 18045,
+			"d_total": 21720,
+			"e_total": 32421,
+			"f_total": 821,
+			"estimated_population": 3554728,
+			"ref_period": 2015
+		},
+		{
+			"lga_name11": "Melbourne (C)",
+			"a_total": 41986,
+			"b_total": 207936,
+			"c_total": 18541,
+			"d_total": 20457,
+			"e_total": 38567,
+			"f_total": 949,
+			"estimated_population": 3626955,
+			"ref_period": 2016
+		},
+	]
+}
