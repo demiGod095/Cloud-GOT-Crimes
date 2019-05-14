@@ -4,9 +4,9 @@
 
 user="server_admin"
 password="password"
-port=$3
-localPort=$4
-ips=$5
+port=$1
+localPort=$2
+ips=$3
 
 firstIp=1
 
