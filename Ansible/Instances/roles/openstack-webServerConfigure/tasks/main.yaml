@@ -1,0 +1,19 @@
+# Configure packages
+- name: upgrade all packages
+  yum: name=* state=latest
+
+- name: Install a list of packages
+  yum:
+    name:
+      - "{{ item }}"
+    state: latest
+    update_cache: yes
+  with_items:
+    - httpd
+    - php
+
+- command: "{{ item }}"
+  with_items:
+    - systemctl start httpd.service
+    - systemctl restart httpd.service
+    - systemctl enable httpd.service
