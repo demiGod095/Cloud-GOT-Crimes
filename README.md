@@ -10,7 +10,7 @@
   - http_proxy="http://wwwproxy.unimelb.edu.au:8000"
   - https_proxy="http://wwwproxy.unimelb.edu.au:8000"
   - ftp_proxy="http://wwwproxy.unimelb.edu.au:8000"
-  - no_proxy=localhost,127.0.0.1,127.0.1.1,ubuntu
+  - no_proxy=localhost,127.0.0.1,127.0.1.1,ubuntu,<ip_address>
 
 * To install Python
   - Getting your Server ready for the install:
