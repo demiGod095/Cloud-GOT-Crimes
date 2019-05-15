@@ -1,6 +1,10 @@
 # CC_assignment_2
 
-* Ideas :- We are doing GOT
+* Ideas :- Our idea is to find correlation between the effect of the graphic scenes from GOT with violent offences in Victoria.
+
+* Wrath :- We are targetting this Deadly Sin.
+
+* Video :- https://www.youtube.com/channel/UC9u9x-S2rsh_Jg1rGgoEweA?disable_polymer=true
 
 * Network Proxy :- /etc/enviornment
   - http_proxy="http://wwwproxy.unimelb.edu.au:8000"
@@ -55,3 +59,4 @@
   - systemctl restart couchdb
   
 * Port forwarding - ssh -i ./sins101.pem -N -L 5984:localhost:5984 ec2-user@172.26.38.5
+
