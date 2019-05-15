@@ -4,8 +4,8 @@
 #Nitish Mathur  				954892     
 #Yash Shinde     				920691
 #Nakia Silva  					796504
-#Shreyas Walvekar    			961621
-#Krishna Srinivas Sundararajan  977863
+#Shreyas Walvekar    				961621
+#Krishna Srinivas Sundararajan  		977863
 import json
 
 agg_state = 'Melbourne (C)'
