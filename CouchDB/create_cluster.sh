@@ -1,3 +1,12 @@
+#This file is developed by Team 52 of COMP90024 of The University of Melbourne.
+#Researched cities : All the cities in Melbourne region
+#Team member - id
+#Nitish Mathur  				            954892     
+#Yash Shinde     				            920691
+#Nakia Silva  					            796504
+#Shreyas Walvekar    				        961621
+#Krishna Srinivas Sundararajan  		977863
+
 #!/bin/bash
 
 # Usage: create-cluster.sh user password port local-port space-separated-ips
