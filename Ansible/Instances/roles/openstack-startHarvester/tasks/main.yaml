@@ -9,6 +9,5 @@
 - name: Extracting twitter harvester
   command: git clone https://github.com/knightmatish/CC_assignment_2.git /mnt/storage/project/
 
-- command: "chmod +x /mnt/storage/project/CouchDB/create_cluster.sh"
-
-- command: 'sh /mnt/storage/project/CouchDB/create_cluster.sh 5984 5986 "172.26.38.5 {{ansible_eth0.ipv4.address}}"'
+# The following line will start the Harvester
+- command: 'python3 /mnt/storage/project/Harvester/twitterHandler.py' 
