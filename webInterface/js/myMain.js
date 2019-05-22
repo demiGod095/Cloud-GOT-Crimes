@@ -228,7 +228,7 @@
           defaultFontFamily: 'Poppins',
           datasets: [{
             label: "TypeC",
-            data: [171088/3345678, 174383/3414103, 174966/3486320, 184008/3554728, 207936/3626955],
+            data: [12946/3345678, 14306/3414103, 15791/3486320, 18045/3554728, 18541/3626955],
             backgroundColor: 'transparent',
             borderColor: 'rgba(220,53,69,0.75)',
             borderWidth: 3,
