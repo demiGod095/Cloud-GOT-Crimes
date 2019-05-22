@@ -35,7 +35,7 @@
             yAxisID: 'y-axis-1',
           }, {
             label: "GOT-Fans",
-            data: [0, 2, 1, 3, 5],
+            data: [0/100, 2/100, 1/100, 3/100, 5/100],
             backgroundColor: 'transparent',
             borderColor: 'rgba(40,167,69,0.75)',
             borderWidth: 3,
@@ -137,7 +137,7 @@
             yAxisID: 'y-axis-1',
           }, {
             label: "GOT-Fans",
-            data: [0, 2, 1, 3, 5],
+            data: [0/100, 2/100, 1/100, 3/100, 5/100],
             backgroundColor: 'transparent',
             borderColor: 'rgba(40,167,69,0.75)',
             borderWidth: 3,
@@ -239,7 +239,7 @@
             yAxisID: 'y-axis-1',
           }, {
             label: "GOT-Fans",
-            data: [0, 2, 1, 3, 5],
+            data: [0/100, 2/100, 1/100, 3/100, 5/100],
             backgroundColor: 'transparent',
             borderColor: 'rgba(40,167,69,0.75)',
             borderWidth: 3,
