@@ -57,7 +57,7 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="active">
-                            <a href="index.html">
+                            <a href="index.php">
                                 <i class="fas fa-chart-bar"></i>Charts</a>
                         </li>
                     </ul>
@@ -93,7 +93,7 @@
                 </div>
             </header>
             <!-- END HEADER DESKTOP-->
-
+            
             <!-- MAIN CONTENT-->
             <div class="main-content">
                 <div class="section__content section__content--p30">
@@ -160,9 +160,17 @@
     <script src="vendor/circle-progress/circle-progress.min.js"></script>
     <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
     <script src="vendor/chartjs/Chart.bundle.min.js"></script>
-    <script src="vendor/select2/select2.min.js">
-    </script>
+    <script src="vendor/select2/select2.min.js"></script>
 
+    <!-- Load data from couch db -->
+    <script type="text/javascript">
+        <?php
+            $url = 'http://server_admin:password@172.26.38.5:5984/twitter_front_end/_design/FTView/_view/FTView?group_level=2';
+            $obj = json_decode(file_get_contents($url), true);
+            echo $obj;
+        ?>
+        // var actual_data = <?php echo $LoadedData ?>
+    </script>
     <!-- Main JS-->
     <script src="js/myMain.js"></script>
 
