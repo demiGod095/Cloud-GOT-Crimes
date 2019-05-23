@@ -175,10 +175,12 @@
                 if ($elem['key'] > 2011)
                 {
                     array_push($output, $elem['value'][0] / $elem['value'][1]);
+                    $last = array($elem['value'][1], $elem['value'][0]);
                 }
             }
         ?>
-        var actual_data = <?php echo (json_encode($output)); ?>
+        var actual_data = <?php echo (json_encode($output)); ?>;
+        var last_data = <?php echo (json_encode($last)); ?>;
     </script>
 
     <!-- Main JS-->

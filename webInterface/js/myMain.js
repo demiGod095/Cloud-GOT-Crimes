@@ -328,7 +328,7 @@
         type: 'doughnut',
         data: {
           datasets: [{
-            data: [71, 29],
+            data: last_data, //[71, 29],
             backgroundColor: [
               "rgba(128, 123, 255,0.9)",
               "rgba(0, 123, 255,0.7)"
