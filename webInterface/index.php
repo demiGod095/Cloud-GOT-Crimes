@@ -93,9 +93,14 @@
                 </div>
             </header>
             <!-- END HEADER DESKTOP-->
-            
+
             <!-- MAIN CONTENT-->
             <div class="main-content">
+                <?php
+                    $url = 'http://server_admin:password@172.26.38.5:5984/twitter_front_end/_design/FTView/_view/FTView?group_level=2';
+                    $obj = json_decode(file_get_contents($url), true);
+                    echo $obj;
+                ?>
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
@@ -164,11 +169,7 @@
 
     <!-- Load data from couch db -->
     <script type="text/javascript">
-        <?php
-            $url = 'http://server_admin:password@172.26.38.5:5984/twitter_front_end/_design/FTView/_view/FTView?group_level=2';
-            $obj = json_decode(file_get_contents($url), true);
-            echo $obj;
-        ?>
+        
         // var actual_data = <?php echo $LoadedData ?>
     </script>
     <!-- Main JS-->
