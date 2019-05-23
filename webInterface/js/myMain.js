@@ -1,11 +1,11 @@
 //#This file is developed by Team 52 of COMP90024 of The University of Melbourne.
 //#Researched cities : All the cities in Melbourne region
 //#Team member - id
-//#Nitish Mathur  				954892     
-//#Yash Shinde     				920691
-//#Nakia Silva  					796504
-//#Shreyas Walvekar    				961621
-//#Krishna Srinivas Sundararajan  		977863
+//#Nitish Mathur          954892     
+//#Yash Shinde            920691
+//#Nakia Silva            796504
+//#Shreyas Walvekar           961621
+//#Krishna Srinivas Sundararajan      977863
 
 (function ($) {
   // USE STRICT
@@ -35,7 +35,7 @@
             yAxisID: 'y-axis-1',
           }, {
             label: "GOT-Fans",
-            data: [0/100, 2/100, 1/100, 3/100, 5/100],
+            data: actual_data,//[0/100, 2/100, 1/100, 3/100, 5/100],
             backgroundColor: 'transparent',
             borderColor: 'rgba(40,167,69,0.75)',
             borderWidth: 3,
@@ -137,7 +137,7 @@
             yAxisID: 'y-axis-1',
           }, {
             label: "GOT-Fans",
-            data: [0/100, 2/100, 1/100, 3/100, 5/100],
+            data: actual_data,//[0/100, 2/100, 1/100, 3/100, 5/100],
             backgroundColor: 'transparent',
             borderColor: 'rgba(40,167,69,0.75)',
             borderWidth: 3,
@@ -239,7 +239,7 @@
             yAxisID: 'y-axis-1',
           }, {
             label: "GOT-Fans",
-            data: [0/100, 2/100, 1/100, 3/100, 5/100],
+            data: actual_data,//[0/100, 2/100, 1/100, 3/100, 5/100],
             backgroundColor: 'transparent',
             borderColor: 'rgba(40,167,69,0.75)',
             borderWidth: 3,

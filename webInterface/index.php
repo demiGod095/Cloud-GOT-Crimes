@@ -1,11 +1,11 @@
 <!-- #This file is developed by Team 52 of COMP90024 of The University of Melbourne.
 #Researched cities : All the cities in Melbourne region
 #Team member - id
-#Nitish Mathur  				954892     
-#Yash Shinde     				920691
-#Nakia Silva  					796504
-#Shreyas Walvekar    				961621
-#Krishna Srinivas Sundararajan  		977863 -->
+#Nitish Mathur                  954892     
+#Yash Shinde                    920691
+#Nakia Silva                    796504
+#Shreyas Walvekar                   961621
+#Krishna Srinivas Sundararajan          977863 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -96,11 +96,6 @@
 
             <!-- MAIN CONTENT-->
             <div class="main-content">
-                <?php
-                    $url = 'http://server_admin:password@172.26.38.5:5984/twitter_front_end/_design/FTView/_view/FTView?group_level=2';
-                    $obj = json_decode(file_get_contents($url), true);
-                    echo $obj;
-                ?>
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
@@ -169,9 +164,23 @@
 
     <!-- Load data from couch db -->
     <script type="text/javascript">
-        
-        // var actual_data = <?php echo $LoadedData ?>
+        <?php
+            $url = 'http://server_admin:password@172.26.38.5:5984/twitter_front_end/_design/FTView/_view/FTView?group_level=2';
+            $obj = json_decode(file_get_contents($url), true);
+            $arr = $obj['rows'];
+            $output = array();
+            // print($output);
+            foreach ($arr as $elem)
+            {
+                if ($elem['key'] > 2011)
+                {
+                    array_push($output, $elem['value'][0] / $elem['value'][1]);
+                }
+            }
+        ?>
+        var actual_data = <?php echo (json_encode($output)); ?>
     </script>
+
     <!-- Main JS-->
     <script src="js/myMain.js"></script>
 
