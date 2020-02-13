@@ -4,7 +4,7 @@
 
 * Wrath :- We are targetting this Deadly Sin.
 
-* Video :- https://www.youtube.com/channel/UC9u9x-S2rsh_Jg1rGgoEweA?disable_polymer=true
+<!--* Video :- https://www.youtube.com/channel/UC9u9x-S2rsh_Jg1rGgoEweA?disable_polymer=true -->
 
 * Network Proxy :- /etc/enviornment
   - http_proxy="http://wwwproxy.unimelb.edu.au:8000"
